@@ -1,13 +1,13 @@
 import React from 'react'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 
-// import footerStyles from './footer.module.scss'
+import footerStyles from './footer.module.scss'
 
 const Footer = () => {
 	const { author } = useSiteMetadata()
 
 	return (
-		<footer>
+		<footer className={footerStyles.footer}>
 			<p>
 				Created by {author}, © {new Date().getFullYear()}
 			</p>
