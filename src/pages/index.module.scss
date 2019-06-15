@@ -1,6 +1,8 @@
 .posts {
 	list-style-type: none;
 	margin: 0;
+	position: relative;
+	top: 12rem;
 }
 
 .post {
@@ -27,4 +29,20 @@
 		font-size: 0.8rem;
 		font-style: italic;
 	}
+}
+
+.tags {
+	list-style-type: none;
+	display: inline-flex;
+	margin: 0;
+}
+
+.tag {
+	background: orange;
+	border: none;
+	border-radius: 0.5rem;
+	color: white;
+	font-size: 0.7rem;
+	margin-right: 0.25rem;
+	padding: 0.2rem;
 }
