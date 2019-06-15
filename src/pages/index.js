@@ -41,16 +41,19 @@ const IndexPage = () => {
 						<Link to={`/${edge.node.fields.slug}`}>
 							<h2>{edge.node.frontmatter.title}</h2>
 							<p>
-								<date datetime={edge.node.frontmatter.date}>
+								<time dateTime={edge.node.frontmatter.date}>
 									{moment(edge.node.frontmatter.date).format(
 										'D. MMMM YYYY'
 									)}
-								</date>
+								</time>
 							</p>
 							<ul className={indexStyles.tags}>
 								{edge.node.frontmatter.tags
 									? edge.node.frontmatter.tags.map(tag => (
-											<li className={indexStyles.tag}>
+											<li
+												className={indexStyles.tag}
+												key={tag}
+											>
 												#{tag}
 											</li>
 									  ))
